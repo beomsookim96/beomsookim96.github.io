@@ -214,7 +214,7 @@ class CursorTrail {
             position: fixed;
             width: 4px;
             height: 4px;
-            background: linear-gradient(135deg, #00ffff, #ff00ff);
+            background: linear-gradient(135deg, #7F52FF, #FF6B00);
             border-radius: 50%;
             pointer-events: none;
             z-index: 9999;
@@ -289,8 +289,9 @@ if (heroSection) {
         heroSection.style.background = `
             radial-gradient(
                 circle at ${x * 100}% ${y * 100}%,
-                rgba(0, 255, 255, 0.1) 0%,
-                transparent 50%
+                rgba(127, 82, 255, 0.15) 0%,
+                rgba(255, 107, 0, 0.05) 30%,
+                transparent 60%
             )
         `;
     });
@@ -311,4 +312,4 @@ window.addEventListener('scroll', () => {
     }
 });
 
-console.log('%c🎨 Portfolio loaded successfully! ', 'background: linear-gradient(135deg, #00ffff, #ff00ff); color: white; padding: 10px; font-size: 16px; font-weight: bold;');
+console.log('%c✨ Portfolio loaded successfully! ', 'background: linear-gradient(135deg, #7F52FF, #FF6B00); color: white; padding: 10px; font-size: 16px; font-weight: bold;');

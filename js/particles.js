@@ -22,7 +22,7 @@ class ParticleSystem {
     init() {
         // Scene setup
         this.scene = new THREE.Scene();
-        this.scene.fog = new THREE.FogExp2(0x0a0a0f, 0.001);
+        this.scene.fog = new THREE.FogExp2(0x0D0E13, 0.001);
 
         // Camera setup
         this.camera = new THREE.PerspectiveCamera(
@@ -59,11 +59,13 @@ class ParticleSystem {
             positions[i3 + 1] = (Math.random() - 0.5) * 1000;
             positions[i3 + 2] = (Math.random() - 0.5) * 1000;
 
-            // Color - gradient from cyan to magenta
+            // Color - JetBrains gradient (Purple to Orange)
             const mixRatio = Math.random();
-            colors[i3] = mixRatio; // R
-            colors[i3 + 1] = 1.0 - mixRatio * 0.5; // G
-            colors[i3 + 2] = 1.0; // B
+            // Purple: #7F52FF (0.498, 0.322, 1.0)
+            // Orange: #FF6B00 (1.0, 0.420, 0.0)
+            colors[i3] = 0.498 + mixRatio * 0.502; // R
+            colors[i3 + 1] = 0.322 + mixRatio * 0.098; // G
+            colors[i3 + 2] = 1.0 - mixRatio * 1.0; // B
 
             // Size
             sizes[i] = Math.random() * 3 + 1;
